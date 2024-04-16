@@ -1,0 +1,102 @@
+:root {
+    --select-text-bg-color: #6e7b99; /* 文本选中背景色 */
+    --body-color: #e6e6e6; /* 文本颜色 */
+    --para-color: #a9a9a9; /* 段落文本颜色 */
+
+    --commonstr-color: #a9a9a9; /* 常规字符串颜色 */
+
+    --commonstrbg-color: #263238; /* 常规字符串背景色 */
+
+    --timebodybg-color: #a0a0a0; /* 时间轴主体部分背景色 */
+
+    --sidelist-selected-color: #263238; /* 侧边栏条目选中背景色 */
+
+    --yamlbg-color: #1a1a1a; /* 头部YAML背景色 */
+    --yaml-color: #7f9bb7; /* 头部YAML字体颜色 */
+
+    --bg-color: #262626; /* 整体背景色 */
+    --sidebarbg-color: #1a1a1a; /* 侧边栏背景色 */
+    --sidebar-hover-bg-color: #597ef777;
+    --sidebar-active-bg-color: #4096ff;
+    --file-library-search-input-focus-color: #000;
+
+    --focus-color: #adc6ff; /* 点击某些元素（如标题）显示的颜色 */
+
+    --codeblockbg-color: #1a1a1a; /* 代码块背景色 */
+    --codeblockfont-color: #a9a9a9; /* 代码块默认字体颜色 */
+    --codeblockline-color: #303030; /* 代码块选中行颜色 */
+    --codeblocknum-color: #6C6CFFCC; /* 代码块行编号颜色 */
+    --code-color: #1d1d1d; /* 行内代码前景色 */
+    --codebg-color: #b1b1b199; /* 行内代码背景色 */
+
+    --titlebefore-color: #597ef7; /* 各级标题点缀颜色 */
+
+    --blockquotebg-color: #384a5b;
+    --blockquoteinfoicon-color: #5fa7e4; /* blockquote提示图标色 */
+    --blockquoteinfobg-color: #405660; /* 提示型blockquote背景色 */
+    --blockquotedangericon-color: #ff4d4f; /* 危险型blockquote提示图标色 */
+    --blockquotedangerbg-color: #cf1322; /* 危险型blockquote背景色 */
+    --blockquotesuccessicon-color: #73d13d; /* 成功型blockquote提示图标色 */
+    --blockquotesuccessbg-color: #389e0d; /* 成功型blockquote背景色 */
+    --blockquotewarnicon-color: #ffc53d; /* 警告型blockquote提示图标色 */
+    --blockquotewarnbg-color: #d48806; /* 警告型blockquote背景色 */
+    --blockquotequestionicon-color: #ffec3d; /* 问题型blockquote提示图标色 */
+    --blockquotequestionbg-color: #ceb000; /* 问题型blockquote背景色 */
+
+    --ulol-color: #8b8b8b; /* 有序无序列表前缀颜色 */
+    --olfore-color: white; /* 有序列表字体颜色 */
+    --list-hover-color: #10239e;
+
+    --tableevenrow-color: #06117833; /* 表格偶数行颜色 */
+    --tablefocusrow-color: #597ef766; /* 表格鼠标悬停行颜色 */
+    --tableborder-color: #1d39c4; /* 表格边框色 */
+    --tablethbg-color: #597ef7; /* 表格表头背景色 */
+
+    --toc-color: #1677ff; /* 目录颜色 */
+
+    --atext-color: #a9a9a9; /* 超链接文本颜色 */
+    --ahover-color: black; /* 超链接悬停文本颜色 */
+    --abottom-color: #003eb3; /* 超链接下划线颜色 */
+
+
+    --footnote-color: #e96900; /* 脚注上标前景色 */
+    --footnotebg-color: #f8f8f8; /* 脚注上标背景色 */
+
+    --highlight-color: red; /* 高亮文本前景色 */
+    --highlightbg-color: yellow; /* 高亮文本背景色 */
+
+    --split-color: #597ef7; /* 分割线颜色 */
+
+    --taskborder-color: #13c2c2; /* 任务列表边框色 */
+    --taskfocus-color: #597ef7; /* 任务列表选中填充色 */
+
+    --spannote-color: #e91e64; /* 小标签背景色 */
+
+    --emptext-color: #fe5f58; /* 几款强调型文本的颜色 */
+
+    --hidetextcover-color: #a1a1a1; /* 隐藏文本遮罩颜色 */
+    --hidetext-color: #a9a9a9; /* 隐藏文本颜色 */
+
+    --spanbtn-color: #1d39c4; /* 文本按钮颜色 */
+
+    --detailstxt-color: black; /* 折叠框summary文字颜色 */
+    --detailsbg-color: #6e7b99; /* 折叠框summary背景色 */
+    --detailsborder-color: #4096ff; /* 折叠框边框色 */
+
+    /* dy font */
+    --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
+    --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
+
+    background: url("./bgimg.jpg") no-repeat 0 20% fixed;
+    background-size: cover;
+}
+
+:root::before {
+    content: "";
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

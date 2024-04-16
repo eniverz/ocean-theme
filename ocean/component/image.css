@@ -1,0 +1,98 @@
+/** 图片 **/
+.md-image {
+    margin: 15px auto 5px;
+}
+
+.md-image img {
+    border-radius: 4px;
+}
+
+/* 当按`![shadow-随便写]()`格式写时（或`<img src="" alt="shadow-随便写">`），会有阴影 */
+.md-image img[alt|='shadow'] {
+    box-shadow: #84A1A8 0px 10px 15px;
+    background-size: 100% 100%;
+    cursor: default;
+    border-left: 0;
+    border-right: 0;
+}
+
+/* 模糊特效 */
+.md-image img[alt|='blur'] {
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -ms-filter: blur(6px);
+    -o-filter: blur(6px);
+    transition: all 0.2s linear;
+}
+
+.md-image img[alt|='blur']:hover {
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+}
+
+/*图片暗灰*/
+.md-image img[alt|='gray'] {
+    filter: grayscale(100%);
+}
+
+.md-image img[alt|='gray']:hover {
+    transition: 0.5s linear;
+    filter: grayscale(0);
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: var(--body-font);
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+/* 图片自动编号 */
+#write {
+    counter-reset: imgNum;
+}
+
+#write p > .md-image:after {
+    counter-increment: imgNum;
+    content: "图" counter(imgNum) attr(alt) !important;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-top: 8px !important;
+    font-size: small;
+}
+
+div[alt="fig"] {
+    font-size: small;
+    text-align: center;
+    margin-top: -10px !important;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification {
+    background-color: var(--bg-color) !important;
+}

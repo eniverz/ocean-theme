@@ -1,0 +1,113 @@
+@import "ocean/variable.css";
+@import "ocean/fonts/font.css";
+@import "ocean/iconfonts/iconfont.min.css";
+@import "ocean/code.css";
+@import "ocean/special.css";
+
+/*components*/
+@import "ocean/component/sider.css";
+@import "ocean/component/scrollbar.css";
+@import "ocean/component/alert-text.css";
+@import "ocean/component/list.css";
+@import "ocean/component/little-tag.css";
+@import "ocean/component/code-block.css";
+@import "ocean/component/collapse.css";
+@import "ocean/component/footer.css";
+@import "ocean/component/task-checkbox.css";
+@import "ocean/component/separator.css";
+@import "ocean/component/image.css";
+@import "ocean/component/focus-mode.css";
+@import "ocean/component/state-bar.css";
+@import "ocean/component/container.css";
+@import "ocean/component/hyperlink.css";
+@import "ocean/component/catalogue.css";
+@import "ocean/component/title.css";
+@import "ocean/component/table.css";
+@import "ocean/component/blockquote.css";
+
+html {
+    font-size: 17px;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--body-color);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.8rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    background-size: 100%;
+    padding: 0;
+}
+
+.window * {
+    color: var(--body-color) !important;
+}
+
+button {
+    border-radius: 8px !important;
+}
+
+div.modal-content {
+    border-radius: 8px !important;
+}
+
+#write {
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 70vw;
+    padding: 50px;
+    padding-bottom: 65vh;
+    border: 1px solid #d0d5d7;
+    border-radius: 10px;
+    margin: 45vh auto 3.5vh;
+}
+
+#md-searchpanel {
+    background-color: var(--bg-color);
+}
+
+/** 文本高亮 **/
+#write span[md-inline="highlight"] mark {
+    background-color: var(--highlightbg-color);
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: var(--highlight-color);
+    font-weight: 500;
+}
+
+@media print {
+    .typora-export * {
+        -webkit-print-color-adjust: exact;
+    }
+
+    html {
+        font-size: 16px !important;
+    }
+
+    body {
+        font-family: Times, 'SimSun', serif !important;
+        color: #000000 !important;
+    }
+
+    p {
+        color: #000000 !important;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+
+    .MathJax_SVG_Display svg {
+        max-width: 100% !important;
+    }
+}

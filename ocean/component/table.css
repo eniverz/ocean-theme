@@ -1,0 +1,107 @@
+/** 表格样式 **/
+table {
+    padding: 0;
+    word-break: initial;
+    font-size: 12pt;
+}
+
+table tr {
+    line-height: 23px !important;
+}
+
+/*
+table tr {
+    border-top: 1px solid var(--main-6);
+    margin: 0;
+    padding: 0;
+}
+*/
+table tr:nth-child(2n) {
+    background-color: var(--tableevenrow-color);
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid var(--tableborder-color);
+    background-color: var(--tablethbg-color);
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid var(--tableborder-color);
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+table tr:hover {
+    background-color: var(--tablefocusrow-color);
+}
+
+/* 三线表（自定义需覆盖上述默认表格样式） */
+div[alt="three-table"] table {
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    font-size: 11pt;
+}
+
+div[alt="three-table"] table tr td, div[alt="three-table"] table tr th {
+    border: none;
+}
+
+div[alt="three-table"] table tr, div[alt="three-table"] table tr th, div[alt="three-table"] table tr:hover {
+    background-color: var(--bg-color);
+}
+
+div[alt="three-table"] table tr th {
+    border-bottom: 0.75pt solid;
+    font-family: "Source Sans Pro";
+    font-size: 11pt;
+}
+
+/* 控制文本的居中or左or右显示 */
+*[alt="center"] {
+    text-align: center;
+}
+
+*[alt="left"] {
+    text-align: left;
+}
+
+*[alt="right"] {
+    text-align: right;
+}
+
+/* 无表头表格（且调小了格子的padding值） */
+div[alt="notitle-table"] table {
+    font-size: 11pt;
+}
+
+div[alt="notitle-table"] table tr, div[alt="notitle-table"] table tr th, div[alt="notitle-table"] table tr:hover {
+    background-color: var(--bg-color);
+}
+
+div[alt="notitle-table"] table tr td:hover, div[alt="notitle-table"] table tr th:hover {
+    background-color: var(--tablefocusrow-color);
+}
+
+div[alt="notitle-table"] table tr th {
+    font-weight: normal;
+}
+
+div[alt="notitle-table"] table tr th, div[alt="notitle-table"] table tr td {
+    padding: 0 8px;
+}

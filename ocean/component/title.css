@@ -1,0 +1,175 @@
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 code {
+    font-size: inherit !important;
+}
+
+
+/** 不同级别标题样式 **/
+
+
+h1 {
+    text-align: center;
+    padding-bottom: 0.3em;
+    font-size: 2.2em;
+    line-height: 1.2;
+    margin: 2.4em auto 1.2em;
+    display: block;
+}
+
+h1 span {
+    display: inline-block;
+    position: relative;
+}
+
+h1 span:after {
+    background: var(--titlebefore-color);
+    bottom: -5px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    width: 100%;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+h1:hover span:after {
+    transform: scaleX(1);
+}
+
+h2 {
+    margin: 1.2em auto 1em;
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--titlebefore-color);
+}
+
+h2::before {
+    content: '\e689' !important; /* 风车图标 */
+    color: var(--titlebefore-color);
+    font-family: "iconfont";
+}
+
+/* h2标题内容稍稍偏右一点 */
+h2 * {
+    margin-left: .18rem;
+}
+
+#write > h2.md-focus:before {
+    color: var(--focus-color);
+}
+
+#write > h2.md-focus {
+    border-bottom-color: var(--focus-color);
+}
+
+.about-content-description h2:before {
+    content: none !important;
+}
+
+.about-content-description h2 {
+    border-bottom: none;
+}
+
+h3 {
+    font-size: 1.4em;
+    line-height: 1.43;
+    /*margin: 1.6em auto 1.2em;*/
+    padding-left: 9px;
+    border-left: 5px solid var(--titlebefore-color);
+}
+
+h4 {
+    margin: 0.4em auto 0.1em;
+    font-size: 1.2em;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: inline-block;
+    border: 1px solid var(--titlebefore-color);
+    border-top: 4px solid var(--titlebefore-color);
+}
+
+/* 三级四级标题点击后的前缀提示图标 */
+#write > h3.md-focus:before,
+#write > h4.md-focus:before {
+    width: auto;
+    height: auto;
+    background-color: var(--focus-color);
+    color: #ffffff;
+}
+
+#write > h3.md-focus,
+#write > h4.md-focus {
+    border-color: var(--focus-color);
+}
+
+#write h5::before,
+#write h6::before {
+    position: absolute;
+    right: calc(100% + .75em);
+    top: 0;
+    color: var(--titlebefore-color); /* #5b5b5b */
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-variant: 'small-caps';
+    white-space: nowrap;
+    /* 文本强制不换行 */
+    border: 0;
+}
+
+#write h5.md-focus:before, #write h6.md-focus:before {
+    color: var(--focus-color);
+}
+
+#write h5, #write h6 {
+    /* margin-left: 2em; */
+    font-size: 1rem;
+}
+
+#write h5::before {
+    content: 'H5';
+    top: 0.18rem;
+}
+
+#write h6::before {
+    content: 'H6';
+    top: 0.18rem;
+}

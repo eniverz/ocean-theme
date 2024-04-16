@@ -1,0 +1,29 @@
+/** 目录 **/
+#write a.md-toc-inner {
+    line-height: 1.6;
+    white-space: pre-line;
+    border-bottom: none;
+    color: var(--toc-color);
+}
+
+.md-toc {
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+#write a.md-toc-inner:hover {
+    text-decoration: underline;
+    /* border-bottom: 2px solid var(--toc-color);text-decoration: none; */
+    color: var(--toc-color) !important;
+    background-color: inherit;
+    border-radius: 0px;
+}
+
+#write a.md-toc-inner code {
+    color: var(--toc-color);
+    background-color: #f3f4f4;
+}
+
+#write a.md-toc-inner:hover:before {
+    content: none !important;
+}

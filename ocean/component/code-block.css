@@ -1,0 +1,58 @@
+/** 代码块 **/
+#write .CodeMirror pre {
+    font-family: var(--code-font);
+    font-size: 0.95em;
+    padding-left: 12px;
+}
+
+.md-fences {
+    background: var(--codeblockbg-color);
+    color: var(--codeblockfont-color);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.6em;
+    border: 0;
+}
+
+/* 代码块行号颜色 */
+.cm-s-inner .CodeMirror-linenumber {
+    /* width: 2ch !important; */
+    color: var(--codeblocknum-color);
+}
+
+/* 代码块光标线条宽度、颜色 */
+#write .CodeMirror-cursors .CodeMirror-cursor {
+    border-left: 2px solid var(--focus-color);
+}
+
+.CodeMirror-wrap {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px #B4B4B44C;
+    padding: 5px;
+}
+
+/* 选中行高亮 */
+.md-fences:not(.md-focus) .CodeMirror-code > *:hover {
+    background-color: var(--codeblockline-color);
+}
+
+.md-fences.md-focus .CodeMirror-code > div.CodeMirror-activeline {
+    background-color: var(--codeblockline-color);
+}
+
+#write ol > li > *[class~="md-fences"],
+#write ul > li > *[class~="md-fences"] {
+    padding-left: 0 !important;
+}
+
+
+/** 行内代码 **/
+#write code {
+    padding: 1px 2px;
+    margin: 0 3px;
+    border-radius: 5px;
+    font-family: var(--code-font); /*font-family: '微软雅黑';*/
+    font-size: 0.9rem;
+    color: var(--code-color);
+    background-color: var(--codebg-color);
+}

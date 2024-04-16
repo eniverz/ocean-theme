@@ -1,0 +1,12 @@
+/* 透明渐变水平线 */
+hr {
+    width: 80%;
+    margin: 0 auto;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--split-color), rgba(0, 0, 0, 0));
+}
+
+#write del {
+    padding: 1px 2px;
+}

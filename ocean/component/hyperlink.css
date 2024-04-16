@@ -1,0 +1,64 @@
+/** 超链接 **/
+#write a {
+    border-bottom:2px solid var(--abottom-color);
+    padding: 0 4px;
+    /*padding-top: 2px;*/
+    transition: .3s;
+    color: var(--atext-color);
+    text-decoration: none;
+}
+#write a:hover {
+    border-radius:6px;
+    border-bottom:2px solid transparent;
+    background-color:var(--abottom-color);
+    color: var(--ahover-color) !important;
+    cursor:pointer;
+}
+#write a[href*="muggledy"] {
+    border-bottom:2px solid red;
+}
+#write a[href*="muggledy"]:hover {
+    background-color:red;
+}
+#write h2 a, #write h4 a, #write a[alt="null"], #write a[alt="ref"]{
+    border-bottom: none !important;
+    /*color: var(--code-color);*/
+}
+h2 a:hover:before, h4 a:hover:before, #write a[alt="null"]:hover:before{
+    content: none !important;
+}
+
+/* 修复空链接（标题锚点）显示底部下划线的问题（padding宽度引起的问题），但是自定义锚点怎么处理？因为自定义的锚点链接里有一个空格，非空，所以自定义锚点时请额外加上alt="none"，这将会使得链接“消失” */
+#write a:empty, #write a[alt="none"], #write a[alt="null"] {
+    padding-left:0px; /*直接上display:none消除超链接会导致锚点失效，visibility:hidden又占位*/
+    padding-right:0px;
+}
+#write a[alt="none"] span {
+    display: none; /*消除空格或其他内容*/
+}
+
+/* 无样式超链接 */
+#write a[alt="null"]:hover{
+    background-color: inherit;
+    border-radius: 0px;
+    color: var(--atext-color) !important;
+}
+#write a[alt="null"] .md-image {
+    margin: 0 !important;
+}
+
+/* 样式：<超链接> */
+#write a[alt="ref"]:before{
+    content: "<";
+}
+#write a[alt="ref"]:after{
+    content: ">";
+}
+
+/* 写法：<span alt="ref">[[1][],[2][]]</span> */
+#write span[alt="ref"] a{
+    border-bottom: none;
+    color: var(--abottom-color);
+    /*padding-left: 2px;
+    padding-right: 2px;*/
+}

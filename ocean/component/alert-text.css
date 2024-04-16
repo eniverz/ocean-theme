@@ -1,0 +1,14 @@
+/** 强调型文本 **/
+span[alt='emp'] {
+    border-bottom: 4px dotted var(--emptext-color);
+}
+
+span[alt='underline'] {
+    border-bottom: 2px solid var(--emptext-color);
+}
+
+span[alt='wavy'] {
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: var(--emptext-color);
+}

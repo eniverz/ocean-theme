@@ -1,0 +1,61 @@
+/** 引用块（提示型） **/
+blockquote {
+    /* border: 1px solid #d1f3ff; */
+    border-left: 5px solid var(--blockquoteinfoicon-color);
+    padding: 10px 15px;
+    color: var(--body-color);
+    background-color: var(--blockquotebg-color); /* white */
+    border-radius: 3px;
+    position:relative;
+}
+
+/* 给提示块加info图标 */
+blockquote[alt="info"]  {
+    border-left-color: var(--blockquoteinfoicon-color);
+    background-color: var(--blockquoteinfobg-color);
+}
+blockquote[alt="info"]::before {
+    content: '\e613';
+    font-family: "iconfont";
+    color: var(--blockquoteicon-color);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: large;
+    font-weight: 600;
+}
+blockquote[alt="danger"] {
+    border-left-color: var(--blockquotedangericon-color);
+    background-color: var(--blockquotedangerbg-color);
+}
+blockquote[alt="danger"]::before {
+    content: '\e695';
+    font-family: "iconfont";
+    color: var(--blockquotedangericon-color);
+}
+blockquote[alt="success"] {
+    border-left-color: var(--blockquotesuccessicon-color);
+    background-color: var(--blockquotesuccessbg-color);
+}
+blockquote[alt="success"]::before {
+    content: '\e614';
+    font-family: "iconfont";
+    color: var(--blockquotesuccessicon-color);
+}
+blockquote[alt="warn"] {
+    border-left-color: var(--blockquotewarnicon-color);
+    background-color: var(--blockquotewarnbg-color);
+}
+blockquote[alt="warn"]::before {
+    content: '\e8c7';
+    font-family: "iconfont";
+    color: var(--blockquotewarnicon-color);
+}
+blockquote[alt="question"] {
+    border-left-color: var(--blockquotequestionicon-color);
+    background-color: var(--blockquotequestionbg-color);
+}
+blockquote[alt="question"]::before {
+    content: '\eb81';
+    font-family: "iconfont";
+    color: var(--blockquotequestionicon-color);
+}
